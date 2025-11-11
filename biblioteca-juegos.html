@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca de Juegos - Tu Plataforma de Juegos</title>
+
+    <link rel="icon" type="image/png" href="Img/logo.png">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="biblioteca-juegos">
+    <!-- Header -->
+    <header class="header">
+        <!-- 🔹 Logo clickeable que lleva al index -->
+        <a href="index.html" class="logo"></a>
+        <nav class="nav-menu">
+            <a href="iniciar-sesion.html">Iniciar Sesión</a>
+            <a href="crear_cuenta.html">Crear Cuenta</a>
+        </nav>
+    </header>
+
+    <!-- Sub Nav -->
+    <nav class="sub-nav">
+        <a href="index.html">Inicio</a>
+        <a href="juegos-principales.html">Juegos</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <section class="main-content">
+            <h2 class="section-title">Juegos:</h2>
+            <div class="game-grid">
+                <!-- 16 cuadros vacíos para juegos -->
+                <div class="game-card" onclick="window.location.href='descarga-juego.html'">
+                    <img src="Img/juego 1.png" alt="Juego 1">
+                </div>
+                <div class="game-card" onclick="window.location.href='descarga-juego.html'">
+                    <img src="Img/futuro1.png" alt="Juego 2">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        &copy; 2025 GameSeed. Todos los derechos reservados.
+    </footer>
+</body>
+</html>
