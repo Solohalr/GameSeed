@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cuenta - Plataforma Gamer</title>
+
+    <link rel="icon" type="image/png" href="Img/logo.png">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* 🔹 Asegura que el footer quede siempre abajo */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body.inicio-sesion {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            flex: 1;
+        }
+    </style>
+</head>
+<body class="inicio-sesion">
+
+    <!-- ENCABEZADO -->
+    <header class="header">
+        <!-- 🔹 Logo clickeable que lleva al index -->
+        <a href="index.html" class="logo"></a>
+        <nav class="nav-menu">
+            <a href="iniciar-sesion.html">Iniciar Sesión</a>
+        </nav>
+    </header>
+
+    <!-- FORMULARIO DE REGISTRO -->
+    <main>
+        <div class="form-container">
+            <h2 style="text-align:center; color:#73654A;">Crear Cuenta</h2>
+            <form action="#" method="post">
+
+                <div class="form-group">
+                    <label for="usuario">Nombre de Usuario</label>
+                    <input type="text" id="usuario" name="usuario" placeholder="Ej: Gamer123" required pattern="[A-Za-z0-9]+">
+                </div>
+
+                <div class="form-group">
+                    <label for="correo">Correo Electrónico</label>
+                    <input type="email" id="correo" name="correo" placeholder="Ej: gamer@correo.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" placeholder="Mínimo 8 caracteres" minlength="8" required>
+                </div>
+
+                <button type="submit" class="btn">Crear Cuenta</button>
+
+                <p style="margin-top:15px; text-align:center;">
+                    ¿Ya tienes una cuenta? <a href="iniciar-sesion.html" style="color:#73654A;">Inicia sesión aquí</a>
+                </p>
+            </form>
+        </div>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <p>© 2025 GameSeed. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

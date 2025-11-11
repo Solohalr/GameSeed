@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Tu Plataforma de Juegos</title>
+
+    <link rel="icon" type="image/png" href="Img/logo.png">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="inicio-sesion">
+    <!-- Header -->
+    <header class="header">
+        <!-- 🔹 Logo clickeable que lleva al index -->
+        <a href="index.html" class="logo"></a>
+        <nav class="nav-menu">
+            <a href="crear_cuenta.html">Crear Cuenta</a>
+        </nav>
+    </header>
+
+    <!-- Sub Nav -->
+    <nav class="sub-nav">
+        <a href="index.html">Inicio</a>
+        <a href="juegos-principales.html">Juegos</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <section class="form-container">
+            <h2>Iniciar Sesión</h2>
+            <form>
+                <div class="form-group">
+                    <label for="username">Usuario*</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña*</label>
+                    <input type="password" id="password" required>
+                </div>
+                <div style="text-align: right; margin-bottom: 15px;">
+                    <a href="crear_cuenta.html" style="color: #73654A; text-decoration: none;">Crear Cuenta</a>
+                </div>
+                <button type="submit" class="btn">Iniciar sesión</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        &copy; 2025 GameSeed. Todos los derechos reservados.
+    </footer>
+</body>
+</html>
