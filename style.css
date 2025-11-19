@@ -1,75 +1,540 @@
-<!DOCTYPE html>
-<html lang="es">
+/* === FUENTE PIXELADA ESTILO GAMER === */
+/* Opción 1: Silkscreen (pixel moderna) */
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inicio - Tu Plataforma de Juegos</title>
+/* ==== Footer siempre abajo (sticky footer) ==== */
 
-  <link rel="icon" type="image/png" href="Img/logo.png">
+/* Asegura que la página use todo el alto y permita empujar el footer */
+html, body {
+    height: 100%;
+    margin: 0;         /* evita márgenes por defecto */
+    display: flex;
+    flex-direction: column;
+}
 
-  <!-- Fuente pixelada estilo gamer -->
-  <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+/* Contenedor principal que ocupa el espacio restante entre header y footer */
+.container {
+    /* Si ya tienes .container con otras reglas, conserva esas y añade: */
+    flex: 1 0 auto; /* permite que el contenido crezca y empuje el footer */
+}
 
-  <!-- Enlace al CSS -->
-  <link rel="stylesheet" href="style.css">
+/* Footer siempre abajo */
+.footer {
+    flex-shrink: 0; /* evita que el footer se encoja */
+    margin-top: 0;  /* eliminar márgenes previos que interfieran */
+}
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QKZ8DX1QT"></script>
-  <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-  gtag('config', 'G-9QKZ8DX1QT');
-</script> 
+body {
+    font-family: 'Silkscreen', sans-serif;
+    /* Cambia por 'Press Start 2P' si prefieres estilo retro */
+    background: #121212;
+    color: #fff;
+    line-height: 1.6;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
 
-<body class="fondo-inicio">
-  <!-- Header -->
-  <header class="header">
-    <div class="logo">
-    </div>
-    <nav class="nav-menu">
-      <a href="iniciar-sesion.html">Iniciar Sesión</a>
-      <a href="crear_cuenta.html">Crear Cuenta</a>
-    </nav>
-  </header>
+/* Resto de tu CSS exactamente igual */
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+}
 
-  <!-- Sub Nav -->
-  <nav class="sub-nav">
-    <a href="index.html">Inicio</a>
-    <a href="juegos-principales.html">Juegos</a>
-  </nav>
+.section-title {
+    font-size: 1.5rem;
+}
 
-  <!-- Main Content -->
-  <div class="container">
-    <section class="main-content">
-      <h2 class="section-title">Quiénes Somos:</h2>
-      <p>
-        Somos un semillero de investigación de la Universidad Cooperativa de Colombia sede Ibagué-Espinal dedicado al
-        desarrollo y
-        publicación de videojuegos. Nuestra plataforma permite subir y descargar juegos creados por estudiantes,
-        ofreciendo un espacio sencillo y accesible para compartir proyectos y disfrutar nuevas experiencias de juego.
-      </p>
-    </section>
+.main-content p {
+    font-size: 1rem;
+}
 
-    <section class="main-content centro">
-      <h2 class="section-title">Descargar Juegos</h2>
-      <a href="juegos-principales.html" class="btn">Descargar Juegos</a>
-    </section>
+.header {
+    background: #2B2318;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Esto centra verticalmente */
+    border-bottom: 3px solid #73654A;
+    position: relative;
+    height: 80px;
+    /* Altura fija del header */
+    z-index: 10;
+}
 
-    <section class="main-content">
-      <h2 class="section-title">Proyectos Futuros:</h2>
-      <p>
-        Próximamente más juegos increíbles, actualizaciones y eventos especiales. ¡Mantente atento!
-      </p>
-    </section>
-  </div>
+/* Logo */
+.logo {
+  width: 70px;
+  height: 70px;
+  background: url('Img/logo.png') no-repeat center center;
+  background-size: contain;
+  border-radius: 15px;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
 
-  <!-- Footer -->
-  <footer class="footer">
-    &copy; 2025 GameSeed. Todos los derechos reservados.
-  </footer>
-</body>
+.logo:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
 
-</html>
+.nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #73654A;
+}
+
+.sub-nav {
+    background: #73654A;
+    padding: 10px 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.sub-nav a {
+    color: #2B2318;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    transition: background 0.3s;
+}
+
+.sub-nav a:hover {
+    background: #73654A;
+    border-radius: 4px;
+}
+
+.main-content {
+    background: rgba(18, 18, 18, 0.8);
+    border: 2px solid #73654A;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #73654A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-title a {
+    color: #73654A;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.game-card {
+    background: #2d2d2d;
+    border: 2px solid #73654A;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+    background: #3a3a3a;
+}
+
+.game-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 8px; 
+}
+
+.btn {
+    background: #73654A;
+    color: #121212;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background: #73654A;
+}
+
+.form-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #2d2d2d;
+    border: 2px solid #73654A;
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #73654A;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    background: #121212;
+    border: 2px solid #73654A;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #73654A;
+    box-shadow: 0 0 5px #73654A;
+}
+
+.game-details {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.requirements {
+    background: #2d2d2d;
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid #73654A;
+}
+
+.requirements h4 {
+    color: #73654A;
+    margin-bottom: 10px;
+}
+
+.footer {
+    background: #2B2318;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    border-top: 2px solid #73654A;
+}
+
+/* === Fondos personalizados === */
+body.fondo-inicio {
+    background: #121212 url('Img/pixart6.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.juegos-principales {
+    background: #000 url('Img/pixart5.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.biblioteca-juegos {
+    background: #1a1a1a url('Img/pixart4.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.descargas_juegos {
+    background: #1a1a1a url('Img/pixart1.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.inicio-sesion {
+    background: #1a1a1a url('Img/Pixart7.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* === PORTADA PRINCIPAL DEL JUEGO === */
+#carouselPortada {
+    border: 2px solid #73654A;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.portada-img {
+    height: 400px;
+    object-fit: cover;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1) drop-shadow(0 0 6px #73654A);
+}
+
+/* === MINIATURAS === */
+.miniaturas {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.miniaturas .game-card {
+    width: 120px;
+    height: 70px;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: transform 0.3s, border 0.3s;
+    cursor: pointer;
+}
+
+.miniaturas .game-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+    transition: transform 0.3s;
+}
+
+.miniaturas .game-card img.active-thumb {
+    border: 2px solid #73654A;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #73654A;
+}
+
+/* === Capa de opacidad sobre todos los fondos === */
+body {
+  position: relative;
+  z-index: 0;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85); /* color + nivel de transparencia */
+  z-index: -1; 
+  pointer-events: none; 
+}
+
+
+/* ==== Efecto de transparencia con borde brillante fijo ==== */
+
+.main-content,
+.form-container,
+.requirements,
+.container,
+.game-card {
+  background: rgba(0, 0, 0, 0.3); /* Fondo semitransparente tipo vidrio */
+  border: 1.5px solid rgba(255, 220, 130, 0.8); /* Borde dorado cálido */
+  border-radius: 10px;
+  padding: 20px;
+  backdrop-filter: blur(8px); /* Desenfoque estilo vidrio */
+  box-shadow:
+    0 0 12px rgba(255, 220, 130, 0.5),
+    0 0 25px rgba(255, 180, 80, 0.3); /* Bloom suave permanente */
+}
+
+/* === Centrar título y botón en la sección Descargar Juegos === */
+.centro {
+  text-align: center;
+}
+
+.centro .section-title {
+  justify-content: center; /* centra si usa flex */
+  text-align: center; /* asegura centrado del texto */
+}
+
+.centro .btn {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+/* ============================================================
+   📱  RESPONSIVIDAD PARA DESCARGA-JUEGO.HTML
+   ============================================================ */
+
+/* ---------  TABLET (≤ 992px)  --------- */
+@media (max-width: 992px) {
+
+    .header {
+        height: auto;
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .nav-menu {
+        gap: 10px;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+
+    .portada-img {
+        height: 300px;
+    }
+
+    .game-details {
+        grid-template-columns: 1fr;
+    }
+
+    .miniaturas .game-card {
+        width: 22%;
+        height: 70px;
+    }
+
+    .comment-box textarea {
+        height: 100px;
+        font-size: 0.9rem;
+    }
+}
+
+
+/* ---------  MÓVIL GRANDE (≤ 768px)  --------- */
+@media (max-width: 768px) {
+
+    .logo {
+        width: 55px;
+        height: 55px;
+    }
+
+    .sub-nav {
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .section-title {
+        font-size: 1.2rem;
+        text-align: center;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .portada-img {
+        height: 250px;
+    }
+
+    .miniaturas {
+        gap: 8px;
+    }
+
+    .miniaturas .game-card {
+        width: 45%;
+        height: 70px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .comment-item {
+        font-size: 0.85rem;
+        padding: 8px;
+    }
+}
+
+
+/* ---------  MÓVIL PEQUEÑO (≤ 480px)  --------- */
+@media (max-width: 480px) {
+
+    .header {
+        padding: 10px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .section-title {
+        font-size: 1rem;
+    }
+
+    .main-content p,
+    .requirements p {
+        font-size: 0.85rem;
+    }
+
+    .portada-img {
+        height: 200px;
+    }
+
+    .miniaturas .game-card {
+        width: 48%;
+        height: 60px;
+    }
+
+    .rating label {
+        font-size: 1.5rem;
+    }
+
+    .comment-box textarea {
+        height: 80px;
+        font-size: 0.8rem;
+    }
+
+    .comment-item {
+        font-size: 0.8rem;
+    }
+}
+
+
+/* ---------  ULTRA SMALL DEVICES (≤ 360px)  --------- */
+@media (max-width: 360px) {
+
+    .section-title {
+        font-size: 0.9rem;
+    }
+
+    .miniaturas .game-card {
+        width: 100%;
+        height: 60px;
+    }
+
+    .btn {
+        font-size: 0.85rem;
+        padding: 8px;
+    }
+}
